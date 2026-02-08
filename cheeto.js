@@ -17,12 +17,12 @@ return "";
 
 //Set base page code
 document.documentElement.innerHTML = `<html><head><link rel="icon" href="data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'><path fill='white' d='M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z'></path></svg>">
-<title>Cheeto Disabler</title>
+<title>Ingot</title>
 </head>
 <body ` + isPageDev() + `>
 <div class="nav">
 <div class="nav-left">
-<div class="nav-title">cheeto disabler</div>
+<div class="nav-title">Ingot</div>
 <div class="nav-right">
 <div class="nav-dev">Developer mode</div>
 <div ` + isButtonDev() + ` class="item-toggle item-toggle-dev" id="toggle" onclick="toggle(this);devMode()" onmousedown="togglePress(this, 'down')" onmouseup="togglePress(this, 'up')">
@@ -40,7 +40,7 @@ document.documentElement.innerHTML = `<html><head><link rel="icon" href="data:im
 <div class="items-main">
 <div class="items" id="items">
 <div class="patched">Error: This may have been patched</div>
-<div class="wrongpage">You are not on the correct page.<br>to use cheeto disabler click the button below to redirect and run the bookmarklet again.<div class="item-left-buttons" style="justify-content: center; margin: 20px;">
+<div class="wrongpage">You are not on the correct page.<br>To use Ingot click the button below to redirect and run the bookmarklet again.<div class="item-left-buttons" style="justify-content: center; margin: 20px;">
 <div class="item-left-button" onclick="window.location='https://chrome.google.com/webstorex'">Redirect</div>
 </div></div>
 </div>
@@ -59,21 +59,25 @@ document.documentElement.innerHTML = `<html><head><link rel="icon" href="data:im
 	color-scheme: dark;
 }
 
-body{
-  background: radial-gradient(circle at top,#ffb14a,#ff7a00 55%,#b33b00);
-  margin:0;
-  padding:0;
-  color:#fff;
-  font-weight:bold;
+body {
+	background: #FFA500;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-weight: bold;
 }
 
-
-
-
-.nav{
-  background: linear-gradient(180deg,#ff9a2f,#ff6a00);
-  border-bottom: 2px solid rgba(255,255,255,.25);
-
+.nav {
+	width: 100%;
+	height: 55px;
+	background: #FFA500;
+	border-bottom: 1px solid rgba(255, 255, 255, .3);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 9;
+}
 
 .nav-left {
 	align-items: center;
@@ -92,17 +96,26 @@ body{
 }
 
 .nav-dev {
-	color: rgb(154, 160, 166);
+	color: white;
 	font-size: 13px;
 	margin-inline-end: calc(16px + 30px);
 	margin-bottom: 3px;
+	font-weight: bold;
 }
 
 .item-toggle-dev {
 	transform: translateX(-30px);
 }
 
-.nav-title { color: #fff; }
+.nav-title {
+	color: white;
+	font-size: 22px;
+	letter-spacing: .25px;
+	line-height: normal;
+	margin-inline-start: 6px;
+	padding-inline-end: 12px;
+	font-weight: bold;
+}
 
 .items-main {
 	min-width: 400px;
@@ -120,12 +133,14 @@ body{
 /*max-width: calc(400px * 3 + 12pz * 3);*/;
 }
 
-.item{
-  background: linear-gradient(180deg,#ffffff12,#00000035);
-  border: 2px solid rgba(255,255,255,.25);
-  box-shadow: 0 12px 30px rgba(0,0,0,.45);
+.item {
+	height: 160px;
+	width: 400px;
+	background: #292a2d;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, .3) 0 1px 2px 0, rgba(0, 0, 0, .15) 0 2px 6px 2px;
+/*transition: height .3s cubic-bezier(.25,.1,.25,1);*/;
 }
-
 
 .item-main {
 	display: flex;
@@ -194,20 +209,22 @@ body{
 
 .item-title {
 	margin-inline-end: 8px;
-	color: rgb(232, 234, 237);
+	color: white;
 	white-space: nowrap;
 	margin-bottom: 4px;
 	font-size: 13px;
 	margin-top: 2px;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	font-weight: bold;
 }
 
 .item-version {
-	color: rgb(154, 160, 166);
+	color: white;
 	font-size: 13px;
 	margin-bottom: 4px;
 	display: none;
+	font-weight: bold;
 }
 
 .item-description-overflow {
@@ -216,20 +233,22 @@ body{
 }
 
 .item-description {
-	color: rgb(154, 160, 166);
+	color: white;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	flex: 1;
 	font-size: 13px;
 	line-height: 20.02px;
 	margin-top: 3px;
+	font-weight: bold;
 }
 
 .item-id {
-	color: rgb(154, 160, 166);
+	color: white;
 	font-size: 13px;
 	margin-top: 5px;
 	display: none;
+	font-weight: bold;
 }
 
 .item-buttons {
@@ -252,12 +271,25 @@ body{
 	flex-basis: 1e-9px;
 }
 
-.item-left-button{
-  border:2px solid rgba(255,255,255,.4);
-  color:#fff;
-  background:rgba(255,255,255,.1);
+.item-left-button {
+	border: 1px solid white;
+	align-items: center;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-flex;
+	font-weight: bold;
+	height: 32px;
+	justify-content: center;
+	min-width: 5.14em;
+	overflow: hidden;
+	padding: 8px 16px;
+	user-select: none;
+	margin-inline-start: 8px;
+	font-size: 13px;
+	line-height: 20.02px;
 }
-.item-left-button:hover{background:rgba(255,255,255,.2)}
 
 .item-left-button:hover {
 	background: rgba(138, 180, 248, 0.08);
@@ -350,7 +382,13 @@ body[dev] .item-version, body[dev] .item-id {
 }
 
 .patched, .wrongpage {
-    color: #fff;
+	color: white;
+	font-size: 15.99px;
+	font-weight: bold;
+	margin-top: 80px;
+	text-align: center;
+	display: none;
+}
 
 .items[patched], .items[wrongpage] {
 	grid-template-columns: initial;
