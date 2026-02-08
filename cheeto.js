@@ -59,13 +59,11 @@ document.documentElement.innerHTML = `<html><head><link rel="icon" href="data:im
 	color-scheme: dark;
 }
 
-body {
-	background: #FFA500;
-	margin: 0;
-	padding: 0;
-	color: white;
-	font-weight: bold;
+body{
+  background: radial-gradient(circle at top,#ffb14a,#ff7a00 55%,#b33b00);
+  color:#fff;
 }
+
 
 .nav {
 	width: 100%;
@@ -132,14 +130,12 @@ body {
 /*max-width: calc(400px * 3 + 12pz * 3);*/;
 }
 
-.item {
-	height: 160px;
-	width: 400px;
-	background: #292a2d;
-	border-radius: 8px;
-	box-shadow: rgba(0, 0, 0, .3) 0 1px 2px 0, rgba(0, 0, 0, .15) 0 2px 6px 2px;
-/*transition: height .3s cubic-bezier(.25,.1,.25,1);*/;
+.item{
+  background: linear-gradient(180deg,#ffffff12,#00000035);
+  border: 2px solid rgba(255,255,255,.25);
+  box-shadow: 0 12px 30px rgba(0,0,0,.45);
 }
+
 
 .item-main {
 	display: flex;
@@ -266,25 +262,12 @@ body {
 	flex-basis: 1e-9px;
 }
 
-.item-left-button {
-	border: 1px solid rgb(95, 99, 104);
-	align-items: center;
-	border-radius: 4px;
-	box-sizing: border-box;
-	color: rgb(138, 180, 248);
-	cursor: pointer;
-	display: inline-flex;
-	font-weight: 500;
-	height: 32px;
-	justify-content: center;
-	min-width: 5.14em;
-	overflow: hidden;
-	padding: 8px 16px;
-	user-select: none;
-	margin-inline-start: 8px;
-	font-size: 13px;
-	line-height: 20.02px;
+.item-left-button{
+  border:2px solid rgba(255,255,255,.4);
+  color:#fff;
+  background:rgba(255,255,255,.1);
 }
+.item-left-button:hover{background:rgba(255,255,255,.2)}
 
 .item-left-button:hover {
 	background: rgba(138, 180, 248, 0.08);
