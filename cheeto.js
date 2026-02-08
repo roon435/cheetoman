@@ -61,21 +61,19 @@ document.documentElement.innerHTML = `<html><head><link rel="icon" href="data:im
 
 body{
   background: radial-gradient(circle at top,#ffb14a,#ff7a00 55%,#b33b00);
+  margin:0;
+  padding:0;
   color:#fff;
+  font-weight:bold;
 }
 
 
-.nav {
-	width: 100%;
-	height: 55px;
-	background: #292a2d;
-	border-bottom: 1px solid rgba(255, 255, 255, .1);
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 9;
-}
+
+
+.nav{
+  background: linear-gradient(180deg,#ff9a2f,#ff6a00);
+  border-bottom: 2px solid rgba(255,255,255,.25);
+
 
 .nav-left {
 	align-items: center;
@@ -104,15 +102,7 @@ body{
 	transform: translateX(-30px);
 }
 
-.nav-title {
-	color: rgb(232, 234, 237);
-	font-size: 22px;
-	letter-spacing: .25px;
-	line-height: normal;
-	margin-inline-start: 6px;
-	padding-inline-end: 12px;
-	font-weight: 500;
-}
+.nav-title { color: #fff; }
 
 .items-main {
 	min-width: 400px;
@@ -360,13 +350,8 @@ body[dev] .item-version, body[dev] .item-id {
 }
 
 .patched, .wrongpage {
-	color: rgb(154, 160, 166);
-	font-size: 15.99px;
-	font-weight: 500;
-	margin-top: 80px;
-	text-align: center;
-	display: none;
-}
+  color: #fff;
+
 
 .items[patched], .items[wrongpage] {
 	grid-template-columns: initial;
