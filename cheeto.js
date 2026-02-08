@@ -350,8 +350,7 @@ body[dev] .item-version, body[dev] .item-id {
 }
 
 .patched, .wrongpage {
-  color: #fff;
-
+    color: #fff;
 
 .items[patched], .items[wrongpage] {
 	grid-template-columns: initial;
