@@ -60,9 +60,11 @@ document.documentElement.innerHTML = `<html><head><link rel="icon" href="data:im
 }
 
 body {
-	background: #202124;
+	background: #FFA500;
 	margin: 0;
 	padding: 0;
+	color: white;
+	font-weight: bold;
 }
 
 .nav {
